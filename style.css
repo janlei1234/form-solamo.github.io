@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #ffcccc, #ff99cc);
+  }
+  
+  /* Heart Falling Animation */
+  .heart-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .heart {
+    position: absolute;
+    font-size: 24px;
+    color: #ff6b81;
+    animation: fall 5s infinite;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-100%) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+    }
+  }
+  
+  /* Button Animation */
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .animated-button {
+    padding: 15px 30px;
+    background: #ff6b81;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  .animated-button:hover {
+    background: #ff3f62;
+  }
+  
+  /* Question Page */
+  .question {
+    text-align: center;
+    margin-top: 20%;
+  }
+  
+  .question h1 {
+    font-size: 2em;
+    color: #ff6b81;
+  }
+  
+  .question button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: buttonBounce 1s infinite alternate;
+  }
+  
+  @keyframes buttonBounce {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .yes-button {
+    background: #7bed9f;
+    color: white;
+  }
+  
+  .no-button {
+    background: #ff4757;
+    color: white;
+  }
+  
+  /* Note Page */
+  .note {
+    text-align: center;
+    margin-top: 20%;
+  }
+  
+  .note p {
+    font-size: 1.5em;
+    color: #ff6b81;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .note .love-you {
+    font-size: 3em;
+    color: #ff6b81;
+    animation: glow 2s infinite;
+  }
+  
+  @keyframes glow {
+    0%, 100% {
+      text-shadow: 0px 0px 5px #ff6b81;
+    }
+    50% {
+      text-shadow: 0px 0px 20px #ff6b81;
+    }
+  }
+  
+/* Close Button */
+.close-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background: #ff4757;
+    color: white;
+    cursor: pointer;
+    animation: buttonBounce 1s infinite alternate;
+  }  
